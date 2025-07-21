@@ -1,0 +1,365 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: #0f0f0f;
+  color: #ededed;
+  background-image: url('nature.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00ffc8;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+/* Navigation */
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 25px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 10%;
+  min-height: 100vh;
+}
+.home-content {
+  max-width: 600px;
+}
+.home-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00ffcc;
+}
+.home-content p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ecbbbb;
+}
+
+/* Profile Image */
+.home-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+  animation: slideFade 1.4s ease-out, float 5s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* HOME SECTION: TEXT LEFT, IMAGE RIGHT */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10%;
+  min-height: 100vh;
+  background: none;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffcc;
+}
+
+.home-content span {
+  color: #ff4f8b;
+}
+
+.home-content p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ecbbbb;
+}
+
+.home-img {
+  flex-shrink: 0;
+}
+
+.home-img img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.about-content h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 100px 10%;
+  background-color: rgba(175, 187, 10, 0.4);
+  text-align: left;
+}
+.skills-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f9fdfc;
+}
+.skills-content p {
+  font-size: 2.1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #00ffcc;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00ccaa;
+}
+.contact-section {
+  background-color: #121212;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+.contact-section a {
+  color: #00ffcc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-section a:hover {
+  color: #ff4081;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ffcc;
+}
+a i {
+  color: #4267B2; /* Facebook Blue */
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+a i:hover {
+  color: #000;
+}
+.contact-section {
+  padding: 50px 20px;
+  background-color: #0f0f0f;
+  color: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  padding: 30px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+.contact-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00ffc8;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-details a {
+  color: #00ffc8;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
